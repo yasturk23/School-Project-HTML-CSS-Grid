@@ -1,0 +1,86 @@
+/*Animation*/
+
+@keyframes opening {
+  from {
+    background-color: #000;
+  }
+  to {
+    background-color: #fff;
+  }
+}
+
+html,
+body,
+.ads {
+  animation-name: opening;
+  animation-duration: 5s;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 0 2vw rgba(0, 0, 0, 0);
+  }
+}
+
+.subscribe-btn:hover {
+  animation-name: pulse;
+  animation-duration: 2s;
+}
+
+@keyframes fade-in {
+  50% {
+    opacity: 1;
+    filter: blur(5px);
+  }
+}
+
+nav a:active {
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+img:hover {
+  animation-name: fade-in;
+  animation-duration: 1s;
+}
+
+/* Animation Item Menu */
+
+@keyframes snip1217 {
+}
+
+.item-menu * {
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+
+.item-menu a:before,
+.item-menu a:after {
+  height: 1px;
+  position: absolute;
+  content: "";
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+  background-color: #555;
+}
+.item-menu a:before {
+  top: 0;
+  left: 0;
+}
+.item-menu a:after {
+  bottom: 0;
+  right: 0;
+}
+.item-menu a:hover,
+.item-menu .current a {
+  color: black;
+}
+.item-menu a:hover:before,
+.item-menu .current a:before,
+.item-menu a:hover:after,
+.item-menu .current a:after {
+  width: 100%;
+}

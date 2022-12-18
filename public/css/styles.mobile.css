@@ -1,0 +1,125 @@
+/* Ipad Mini - Portrait - 768px x 1024px*/
+
+/* Ipad Mini - Orientation - 1024px x 768px*/
+
+/* Iphone XR - Portrait - 414px x 896px*/
+
+/* Iphone XR - Orientation - 896px x 414px*/
+
+/* Ipad Mini - Orientation - 1024px x 768px*/
+@media (max-width: 64em) {
+  html,
+  body {
+    font-size: 93.5%;
+    max-width: 93.5%;
+  }
+}
+
+/* Iphone XR - Orientation - 896px x 414px*/
+@media (max-width: 56em) {
+  html,
+  body {
+    font-size: 81.45%;
+  }
+
+  .showcase {
+    height: 95vh;
+  }
+
+  .article-multi {
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 0.3fr 0.4fr 0.3fr 0.3fr;
+  }
+
+  .sub-article {
+    grid-template-columns: 70% 25%;
+  }
+}
+
+/* Ipad Mini - Portrait - 768px x 1024px*/
+@media (max-width: 48em) {
+  html,
+  body {
+    font-size: 81.45%;
+  }
+
+  .showcase {
+    height: 60vh;
+  }
+  .article-multi {
+    grid-template-rows: 0.2fr 0.4fr 0.6fr 0.6fr;
+  }
+
+  .ads {
+    grid-template-columns: 35% 25% 10% 25%;
+  }
+
+  .sub-article {
+    grid-template-columns: 65% 35%;
+  }
+}
+
+/* Iphone XR - Portrait - 414px x 896px*/
+@media (max-width: 25.875em) {
+  html,
+  body {
+    font-size: 82.96%;
+  }
+
+  .header-top {
+    display: none;
+  }
+
+  nav {
+    border-top: none;
+  }
+
+  .sticky .logo {
+    display: block;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .navbar-links {
+    display: none;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  .navbar-links.active {
+    display: flex;
+    justify-content: center;
+  }
+
+  .showcase {
+    grid-template-rows: 0.7fr 1.5fr 0.7fr;
+    grid-template-columns: repeat(1, 1fr);
+    height: 140vh;
+  }
+
+  .ads {
+    grid-template-columns: 40% 35% 20% 1%;
+  }
+  .ads img {
+    max-width: 100%;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+  .content-title {
+    width: 100%;
+  }
+
+  .sub-article {
+    width: 120%;
+  }
+
+  .navbar-links .login-menu {
+    display: flex;
+  }
+}

@@ -1,0 +1,287 @@
+/*Le menu en haut*/
+header {
+  display: flex;
+  flex-direction: column;
+}
+
+.header-top {
+  margin: 1%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Logo*/
+.logo h1 {
+  font-weight: 300;
+  font-family: "Old Standard TT", serif;
+}
+
+/*Section Membre*/
+.login-menu {
+  display: flex;
+  align-content: flex-end;
+  justify-content: space-around;
+
+  flex-direction: row;
+  flex-wrap: nowrap;
+  column-gap: 2vw;
+}
+.login-menu p {
+  margin: auto;
+}
+
+.login-menu a {
+  margin: auto;
+  text-decoration: none;
+  color: silver;
+  font-weight: 400;
+}
+
+.login-menu a:hover {
+  color: #555;
+  opacity: 0.5;
+  font-weight: 500;
+}
+
+/*Barre de Navigation*/
+nav {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  background-color: inherit;
+}
+
+.sticky .logo {
+  display: none;
+}
+
+.sticky {
+  position: sticky;
+  top: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a,
+nav p {
+  text-decoration: none;
+  margin: auto;
+  color: black;
+  font-size: 1.2em;
+}
+nav a:hover {
+  color: #555;
+  background-color: #eee;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.navbar-links .login-menu {
+  display: none;
+}
+
+/*Menu Hamburger*/
+
+.toggle-button {
+  position: absolute;
+  top: 0.1rem;
+  right: 1rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 2rem;
+  height: 1.3rem;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: #555;
+  border-radius: 10px;
+  margin-bottom: 2px;
+}
+
+/*Section Showcase*/
+
+.showcase {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 1vw;
+  height: 80vh;
+  margin-top: 1vh;
+}
+
+.showcase p,
+em {
+  font-size: 0.9em;
+}
+
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 1vh;
+}
+.article-title {
+  margin-top: 2%;
+}
+
+.article-multi {
+  display: grid;
+  grid-template-rows: 0.5fr 0.5fr 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2%;
+}
+
+.article-summary {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+/*Section Ads*/
+.ads {
+  display: grid;
+  grid-template-columns: 25% 35% 15% 10%;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "ad . . ."
+    "ad newsletter newsletter newsletter"
+    "ad newsletter-cta newsletter-cta newsletter-cta "
+    "ad email subscribe-btn  ."
+    "ad . . .";
+
+  margin-top: 1vh;
+  height: 25vh;
+
+  background-color: #eee;
+}
+
+.ad {
+  height: 100%;
+  grid-row-start: 1;
+  grid-row-end: -1;
+}
+
+.newsletter {
+  grid-column: 2/-1;
+  grid-row: 2/3;
+  font-weight: 300;
+  font-size: 2em;
+}
+
+.newsletter-cta {
+  grid-column: 2/-1;
+  grid-row: 3/4;
+  font-weight: 300;
+}
+
+form {
+  grid-column: 2/4;
+  grid-row: 4/5;
+}
+
+.email {
+  grid-column: 2/3;
+  grid-row: 4/5;
+  background-color: #eee;
+  border: none;
+  border-bottom: 2px solid #ccc;
+}
+
+input::placeholder {
+  font-size: 1.2em;
+}
+input:focus,
+textarea {
+  outline: none;
+}
+
+a {
+  grid-column: 3/4;
+  grid-row: 4/5;
+  color: #444;
+  font-size: 1.1em;
+  align-self: center;
+}
+
+.register-btn {
+  grid-column: 3/4;
+  grid-row: 4/5;
+  margin-left: 2vw;
+  color: #444;
+  font-size: 1.1em;
+  width: 100%;
+}
+
+.register-btn:hover {
+  background-color: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+/*Section Content*/
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 1vh;
+  height: 80vh;
+}
+
+.content p {
+  margin-top: 1%;
+  font-size: 0.9em;
+}
+
+.content-title {
+  font-size: 1.3em;
+  font-weight: 300;
+  font-family: "Old Standard TT", serif;
+  width: 90%;
+}
+
+.news-content {
+  width: 80%;
+}
+
+/*Section Article*/
+
+.sub-article {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "sub-article1 image1"
+    "sub-article2 image2"
+    "sub-article3 image3";
+  width: 90%;
+  gap: 1vw;
+}
+
+/*Section Popular*/
+
+.popular {
+  display: grid;
+  grid-template-columns: 10% 90%;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "rank1 popular1"
+    "rank2 popular2"
+    "rank3 popular3"
+    "rank4 popular4";
+  gap: 1vw;
+}
+
+.rank {
+  font-size: 2em;
+  font-family: "Newsreader", serif;
+  font-weight: 400;
+  align-self: center;
+}
